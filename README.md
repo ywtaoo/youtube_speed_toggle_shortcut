@@ -27,7 +27,7 @@ First, install the Tampermonkey browser extension:
 
 **Option 1: Install from Greasy Fork (Recommended)**
 
-[Click to Install](https://greasyfork.org/scripts/YOUR_SCRIPT_ID)
+[Click to Install](https://greasyfork.org/en/scripts/560281-youtube-speed-toggle)
 
 **Option 2: Manual Installation**
 

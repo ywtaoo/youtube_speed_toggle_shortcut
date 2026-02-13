@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Speed Toggle
 // @namespace    https://github.com/ywtaoo
-// @version      1.0.0
+// @version      1.0.1
 // @description  Add a speed toggle button to YouTube player controls, switch between 1x and 2x with one click
 // @author       ywtaoo
 // @license      MIT
@@ -121,14 +121,15 @@
             return;
         }
 
-        // Find right controls area
-        const rightControls = document.querySelector('.ytp-right-controls');
-        if (!rightControls) return;
+        // Find right controls area (Delhi player uses sub-containers)
+        const targetContainer = document.querySelector('.ytp-right-controls-left')
+                             || document.querySelector('.ytp-right-controls');
+        if (!targetContainer) return;
 
         const button = createSpeedButton();
 
-        // Insert at the first position of right controls (before fullscreen button)
-        rightControls.insertBefore(button, rightControls.firstChild);
+        // Insert at the first position of the controls container
+        targetContainer.insertBefore(button, targetContainer.firstChild);
 
         // Sync current video speed
         syncButtonWithVideo();

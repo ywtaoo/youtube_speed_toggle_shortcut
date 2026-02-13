@@ -86,6 +86,10 @@ Issues and Pull Requests are welcome!
 
 ## Changelog
 
+### v1.0.1 (2026-02-13)
+
+- Fix button not visible due to YouTube "Delhi" player DOM restructure
+
 ### v1.0.0 (2025-12-26)
 
 - Initial release
